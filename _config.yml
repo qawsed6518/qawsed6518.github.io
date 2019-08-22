@@ -1,23 +1,41 @@
 # Site settings
-title: "gjuniioor"
-bye_message: "Thx!"
-baseurl: "/clyell/"
-url: "https://qawsed6518.github.io"
-disqus: gjuniioor
+title: Blog - technology and science at TheReviewIndex
+description: "A blog for sharing thoughts on technology, science and insights at TheReviewIndex."
+url: "http://www.qawsed6518.github.io/"
+ogimage: "img/default-ogimage.png"
+author:
+  name: "DH KIM"
+  email: "qawsed6518@gmail.com"
+  url: "https://www.qawsed6518.github.io"
 
-# Header settings
-nick: "gjuniioor"
-mail:
-    domain: "protonmail"
-    ext: "ch"
-source_code:
-    server: "github.com"
-    nick: "gjuniioor"
-blog:
-    server: "wordpress.com"
-    nick: "gjuniioor"
-fingerprint_key: "5E12 9ABC C2A9 564B C048  2DF9 D327 0D10 BC71 CF75"
 
 # Build settings
+baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
-permalink: /:categories/:title/
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Custom variables
+version: "1.0.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
