@@ -1,0 +1,25 @@
+/* Stylesheets for layout Default
+––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+.layout_default{
+  font-family: $font-family__primary;
+
+  &__bg{
+    @if $layout_default__bg-enable == true {
+      background-color: $bg__full;
+    }
+  }
+
+  &__content{
+    background-color: $layout_postlist__bg;
+    //// DEPECRATED
+    // @if $terminal_is_enable == "true"{
+    //   background-color: $terminal-light-around !important;
+    //   border-bottom-right-radius: 30px !important;
+    // }
+    p{
+      font-size: $font-size__content;
+    }
+  }
+
+}
