@@ -1,8 +1,2 @@
-/_gems/
-/_site/
-/temp/
-/node_modules/
-/.sass-cache/
-/.jekyll-metadata/
-/Gemfile.lock
-**/*/*.bak
+_site
+*.swp

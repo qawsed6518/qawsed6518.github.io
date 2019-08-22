@@ -1,210 +1,23 @@
-# Welcome to Jekyll! ... and Typing!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ data_string.website.title }}, {{  data_string.website.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+title: "gjuniioor"
+bye_message: "Thx!"
+baseurl: "/clyell/"
+url: "https://qawsed6518.github.io"
+disqus: gjuniioor
 
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://qawsed6518.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# Header settings
+nick: "gjuniioor"
+mail:
+    domain: "protonmail"
+    ext: "ch"
+source_code:
+    server: "github.com"
+    nick: "gjuniioor"
+blog:
+    server: "wordpress.com"
+    nick: "gjuniioor"
+fingerprint_key: "5E12 9ABC C2A9 564B C048  2DF9 D327 0D10 BC71 CF75"
 
-
-### BEGIN - This property enables and disables template features. Use to taste.
-maintenance:
-  enable: false
-google:
-  analytics:
-    enable: true
-home:
-  # NEW!
-  terminal:
-    enable: false
-sidebar:
-  avatar:
-    enable: true
-    # NEW!
-    flip: false
-  icons:
-    enable: true
-  socials:
-    enable: true
-content:
-  icons:
-    enable: true
-  postlist:
-    date:
-      enable: true
-    expected:
-      enable: true
-    tags:
-      enable: true
-    comments:
-      enable: true
-  tagpost:
-    date:
-      enable: true
-    expected:
-      enable: true
-    tags:
-      enable: true
-    comments:
-      enable: true
-  post:
-    author:
-      enable: true
-      avatar:
-        enable: false
-    share:
-      enable: true
-      facebook:
-        enable: true
-      linkedin:
-        enable: true
-      twitter:
-        enable: true
-    day_quote:
-      enable: true
-    comments:
-      enable: true
-  contact:
-    note:
-      enable: true
-### END - This property enables and disables template features. Use to taste.
-
-
-
-
-
-
-
-
-### EXTRA BEGIN - These properties are extra features, such as built-in third-party plugins.
-jektify:
-  enable: true
-  open: true
-  toggle:
-    enable: true
-  spotify:
-    user: # "you_user"
-    text: "See me no Spotify"
-  sass:
-    jekyll: true
-    other:
-      dir: "way/to/your/SASS"
-  title:
-    enable: false
-    text: "Música"
-  description:
-    enable: false
-    text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.
-
-plugins:
-  - jemoji
-  - jekyll-paginate-v2
-
-# Settings for the plugins in the _plugins folder.
-_plugins:
-  imager:
-    dir_posts: "assets/images/posts"
-  # To see language support, go to the plugin "_plugins/reading_time.rb"
-  reading_time:
-    locale: en_US
-  # To see language support, go to the plugin "_plugins/datelang.rb"
-  datelang:
-    locale: en_US
-    reload: false
-### EXTRA END - These properties are extra features, such as built-in third-party plugins.
-
-
-
-
-
-
-
-### BEGIN - [IRRELEVANT PROPERTIES] - These properties have no need to change unless you know what you are doing. WATCH OUT!
-
-# Settings Default
-include: ['_blog','_pages','_contact']
+# Build settings
 markdown: kramdown
-highlighter: pygments
-permalink: /blog/:title/
-
-# Build local / Server
-destination: _site
-port: 4000
-host: localhost
-
-# Config SASS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Config feed for atom
-feed:
-  path: atom.xml
-
-# Config for Compress HTML
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
-# Config plugin 'jekyll-tagging'
-tag_page_layout: tag
-tag_page_dir: blog/tags
-tag_permalink_style: pretty
-
-# NEW!
-# Pagination
-# https://github.com/sverrirs/jekyll-paginate-v2
-# NOTE: To disable paging, leave "enabled" for "false",
-#       and in the "_blog/index.md" file, also leave "enabled"
-#       for "false."
-pagination:
-  enabled: true
-  debug: false
-  collection: 'posts'
-  sort_field: 'date'
-  sort_reverse: true
-  per_page: 5
-  permalink: '/blog/:num/'
-  locale: ''
-  title: ':title - Page :num'
-  limit: 0
-  extension: html
-  indexpage: 'index'
-
-# Config for plugin 'jekyll-gist'
-gist:
-  noscript: false
-
-# Exclude files (or folders) in compilation.
-exclude:
-  - docs
-  - development
-  - src
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - screenshot.png
-  - CHANGELOG
-  - LICENSE.txt
-  - COPYING
-  - "**/*.txt"
-  - README.md
-  - init.sh
-  - Rakefile
-  - deploy.conf
-### END - [IRRELEVANT PROPERTIES] - These properties have no need to change unless you know what you are doing. WATCH OUT!
+permalink: /:categories/:title/

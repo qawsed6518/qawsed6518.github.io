@@ -1,27 +1,60 @@
 ---
-layout: hello
-title: Typing
-script: [hello.js]
+layout: content
 ---
 
+# Clyell
 
-Hey, I'am [Typing](https://github.com/williamcanin/typing-jekyll-template){: target="_blank"}. I'm a theme [Jekyll](https://jekyllrb.com){: target="_blank"} Inspired by the habit of typing. Using an appearance that resembles the typewriter. A simple, fast and efficient way of reading, just like the old days.
+[https://gjuniioor.github.io/clyell](https://gjuniioor.github.io/clyell)
 
-'Typing' is intended for users with more technical content than for users who wish to have a stylish page. Keep it simple!
+### About
 
-**Let's get some details:**
+It's just one more [jekyll](https://github.com/jekyll/jekyll) theme. Maybe it's has some appearance like a linux console. :)
 
-This page exists to put everything about you, as if it were a simplified 'About'. The file for editing this page is in the directory root: `index.md`.
+[Bootstrap](http://getbootstrap.com/) was added to turn responsible. Thanks, [@magnunleno](https://github.com/magnunleno).
 
-You already have a template page for 'Blog', 'Projects', 'Search', 'Contact', 'Tags' and 'Resume', but you can change as you want, modifying property values.
+### Features
 
-The 'resume' page, you can print using the browser's Ctrl + P shortcut or the push button. Printing will eliminate useless parts, such as the sidebar. You'll also have a template for post (welcome-tot-jekyll), and you'll have to follow that template header.
+- [x] Google analytics
+- [x] Disqus
+- [x] Responsible
+- [x] Highlights for code
 
-The contact page uses the [Formspree](https://formspree.io/){: target="_blank"} feature, you will have to have an account in the service, and add your email in the `_data/data.yml` file, in property `userdata => email`.
+### Characteristics
 
-If you want to use an image in your blog post, you should use the `_plugins/imager.rb` plugin. The image will be responsive. See the post 'Welcome to Jekyll' where it contains an example of how to use this plugin.
+- [x] Customized (and nice :P) 404 page
+- [x] Simple
+- [x] Friendly to read
 
-Hey Nerd! How is it? You're analyzing me, but are not you using me? Use me now! I'm not into embellishment.
+### Screenshots
 
+![Screenshot]({{ site.baseurl }}images/screenshot/01.png)
 
-[Download](https://github.com/williamcanin/typing-jekyll-template){: target="_blank"}{: .btn-typing}
+![Screenshot]({{ site.baseurl }}images/screenshot/02.png)
+
+### Config file example
+
+~~~ yml
+# Site settings
+title: "gjuniioor"
+bye_message: "Thx!"
+baseurl: "/clyell/"
+url: "https://gjuniioor.github.io"
+disqus: gjuniioor
+
+# Header settings
+nick: "gjuniioor"
+mail:
+    domain: "protonmail"
+    ext: "ch"
+source_code:
+    server: "github.com"
+    nick: "gjuniioor"
+blog:
+    server: "wordpress.com"
+    nick: "gjuniioor"
+fingerprint_key: "5E12 9ABC C2A9 564B C048  2DF9 D327 0D10 BC71 CF75"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+~~~
