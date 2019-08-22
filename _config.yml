@@ -32,7 +32,7 @@ navigation:
     url: https://github.com/qawsed6518/qawsed6518.github.io
 
 # Pagination
-paginate: 3
+paginate: 10
 
 # Includes an icon in the footer for each username you enter
 footer-links:
