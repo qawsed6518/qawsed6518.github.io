@@ -13,7 +13,7 @@ description: unemployed
 #
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: images/ezgif-3-eddd6c979e.gif
+avatar: /images/ezgif-3-eddd6c979e.gif
 
 
 # Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
@@ -22,8 +22,6 @@ avatar: images/ezgif-3-eddd6c979e.gif
 navigation:
   - name: Blog
     url: /
-  - name: About
-    url: /about
   - name: Archive
     url: /archive
   - name: Tags
