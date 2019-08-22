@@ -2,7 +2,7 @@
 title:              "메모장"
 description:        "unemployed"
 author_name:        "DH KIM" # change this to your name
-logo_url:           https://avatars0.githubusercontent.com/u/13794983?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
+logo_url:           /assets/1.gif # Get it from GitHub API: https://api.github.com/users/<username>
 
 # Site Settings
 url:                https://qawsed6518.github.io # main url
