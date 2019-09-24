@@ -1,15 +1,20 @@
+package Homework;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.nio.charset.StandardCharsets;
 
 public class Homework1 {
- 	public static String getSHA(String input) throws NoSuchAlgorithmException
+ 	public static byte[] getSHA(byte[] input) throws NoSuchAlgorithmException
  	{
  		MessageDigest md = MessageDigest.getInstance("SHA-256");
  		
- 		byte byteData[] = md.digest(input.getBytes(StandardCharsets.UTF_8));
+ 		return md.digest(input);
+	}
 
- 		StringBuffer hash = new StringBuffer();
+
+	public static String toHex(byte[] byteData) {
+		StringBuffer hash = new StringBuffer();
 
  		for (byte b : byteData)
 		{
@@ -24,9 +29,10 @@ public class Homework1 {
     {
         try
         {
-    		String s1 = "blockchain homework1";
+        	String s1 = "blockchain homework1";
+  	  		byte[] d1 = s1.getBytes();
 
-    		System.out.println(getSHA(s1));
+    		System.out.println(toHex(getSHA(d1)));
 
        	}
     	catch (NoSuchAlgorithmException e) 
