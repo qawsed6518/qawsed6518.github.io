@@ -2,7 +2,6 @@ package Homework;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.nio.charset.StandardCharsets;
 
 public class Homework1 {
  	public static byte[] getSHA(byte[] input) throws NoSuchAlgorithmException
