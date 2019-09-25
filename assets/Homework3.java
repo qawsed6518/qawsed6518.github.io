@@ -23,7 +23,7 @@ final class Block {
 }
 
 
-public class Homework2 {
+public class Homework3 {
 
 
 	public static byte[] getSHA(byte[] input) throws NoSuchAlgorithmException
@@ -49,12 +49,15 @@ public class Homework2 {
 		String Hex = "";
 		try 
 		{
+			block = getSHA(block);
 			Hex = toHex(getSHA(block));
 		}
 		catch (NoSuchAlgorithmException e) 
 		{
 			System.out.println("Exception: " + e);
 		}
+
+
 		return Hex;
 	}
 
