@@ -26,39 +26,29 @@ final class Block {
 public class Homework3 {
 
 
-	public static byte[] getSHA(byte[] input) throws NoSuchAlgorithmException
+	public static byte[] getSHA(String input) throws NoSuchAlgorithmException
  	{
- 		MessageDigest md = MessageDigest.getInstance("SHA-256");		
- 		return md.digest(input);
+ 		MessageDigest md = MessageDigest.getInstance("SHA-256");	
+ 		md.update(input.getBytes(), 0, input.length());	
+ 		return md.digest();
 	}
 
-	public static String toHex(byte[] byteData) 
-	{
-		StringBuffer hash = new StringBuffer();
- 		for (byte b : byteData)
-		{
-			hash.append(String.format("%02x", b));
-		}
-		return hash.toString();
-	}
 
-	public static String Hash(String bc, long nonce)
+
+	public static BigInteger Hash(String bc, long nonce)
 	{
 		String bcn = bc + nonce;
-		byte[] block = bcn.getBytes();
-		String Hex = "";
+		BigInteger hash = BigInteger.ZERO;
 		try 
 		{
-			block = getSHA(block);
-			Hex = toHex(getSHA(block));
+			hash = new BigInteger(1, getSHA(bcn));
 		}
 		catch (NoSuchAlgorithmException e) 
 		{
 			System.out.println("Exception: " + e);
 		}
 
-
-		return Hex;
+		return hash;
 	}
 
 	public static Block FindNonce(String bc, int diff)
@@ -69,7 +59,7 @@ public class Homework3 {
 
 		while(true)
 			{
-			BigInteger SHA = new BigInteger(Hash(bc, nonce), 16);
+			BigInteger SHA = Hash(bc, nonce);
 			if(SHA.compareTo(difficulty) == -1)
 			{
 				long executionTime = System.currentTimeMillis() - startTime;
@@ -83,7 +73,7 @@ public class Homework3 {
 	{
 		String bc = "blockchain";
 
-		for(int i = 1; i <=20; i++){
+		for(int i = 1; i <=25; i++){
 			Block temp = FindNonce(bc,i);
 			temp.printBlock();
 			System.out.println("");
